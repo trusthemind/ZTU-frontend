@@ -1,0 +1,50 @@
+form {
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    width: 300px;
+}
+
+label input {
+    outline: none;
+}
+
+input {
+    height: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+label span {
+    display: none;
+}
+
+button[type="submit"] {
+    width: auto;
+    height: 40px;
+    background-color: #301560;
+    color: white;
+    border-radius: 20px;
+}
+
+input:valid {
+    border: 2px solid darkseagreen;
+}
+
+input:required:invalid {
+    border: 2px solid red;
+}
+
+input:invalid ~ span {
+    display: block;
+}
