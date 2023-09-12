@@ -1,0 +1,21 @@
+body {
+    margin: 0 auto;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+tr,
+td,
+th {
+    margin: 0px;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.selected {
+    background-color: yellow;
+}
