@@ -1,16 +1,16 @@
 let matrix = [];
 
-let n = 4;
-let m = 4;
+let row = 4;
+let col = 3;
 
 let pos = 0;
 let notzeroRows = 0;
 columswithZero = 0;
 
-for (let i = 0; i < n; ++i) {
+for (let i = 0; i < row; ++i) {
     matrix[i] = [];
-    for (let j = 0; j < m; ++j) {
-        matrix[i][j] = Math.floor((Math.random() * 10) - 5);
+    for (let j = 0; j < col; ++j) {
+        matrix[i][j] = Math.floor((Math.random() * 25) - 5);
         if (matrix[i][j] > 0)
             pos++
     }
@@ -45,18 +45,64 @@ for (let i = 0; i < matrix.length; i++) {
     }
 }
 
+const positiveRows = [];
+let multiplyPos = 1;
+for (let i = 0; i < matrix.length; i++) {
+    if (!matrix[i].some(element => element <= 0)) {
+        positiveRows.push(matrix[i])
+    }
+}
+for (const row of positiveRows) {
+    for (const cell of row) {
+        multiplyPos *= cell;
+    }
+}
 
-let rowsNoNegativeSum = null;
+const transposeMatrix = (matrix) => {
+    const transpose = [];
+    for (let i = 0; i < matrix[0].length; i++) {
+        transpose[i] = [];
+        for (let j = 0; j < matrix.length; j++) {
+            transpose[i][j] = matrix[j][i];
+        }
+    }
+    return transpose;
+}
 
-// for (let i = 0; i < matrix.length; i++) {
-//     if (!matrix.some(v => v < 0))
-//         rowsNoNegativeSum+
-// }
+positiveCols = [];
+let PositiveColumsSum = 0;
+let tempPositive = transposeMatrix(matrix)
+for (let i = 0; i < tempPositive.length; i++) {
+    if (tempPositive[i].every(element => element > 0)) {
+        positiveCols.push(tempPositive[i])
+    }
+}
+for (const coll of positiveCols) {
+    for (const cell of coll) {
+        PositiveColumsSum += cell;
+    }
+}
 
+negativeCols = [];
+let NegativeColumsSum = 0;
+let tempNegative = transposeMatrix(matrix)
+for (let i = 0; i < tempPositive.length; i++) {
+    if (tempPositive[i].some(element => element < 0)) {
+        negativeCols.push(tempPositive[i])
+    }
+}
+for (const coll of negativeCols) {
+    for (const cell of coll) {
+        NegativeColumsSum += cell;
+    }
+}
 
 console.log(matrix);
 console.log("pos", pos);
 console.log("rows without zeros", notzeroRows);
 console.log("colums with zeros", columswithZero);
 console.log("row index with number streak", rowIndexWithStreak);
-console.log("rows summ without negative", rowsNoNegativeSum);
+console.log("pos multiply", positiveRows, multiplyPos);
+console.log('pos :', PositiveColumsSum)
+console.log('neg :', NegativeColumsSum)
+console.log('transpose matrix:', transposeMatrix(matrix))
