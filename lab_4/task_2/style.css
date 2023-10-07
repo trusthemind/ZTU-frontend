@@ -1,0 +1,29 @@
+.accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .accordion li {
+    width: 150px;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .accordion li h2 {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .accordion li .content {
+    display: none;
+    padding: 10px;
+    background-color: #f7f7f7;
+  }
+  
+  .accordion li.active .content {
+    display: block;
+  }
+  
