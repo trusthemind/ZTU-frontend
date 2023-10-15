@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            width: 40px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <label for="ua-check">
+            <span>Ukrainian</span>
+            <input type="checkbox" id="ua-check" value="ua">
+        </label>
+        <label for="en-check">
+            <span>English</span>
+            <input type="checkbox" id="en-check" value="en">
+        </label>
+        <label for="sp-check">
+            <span>Spain</span>
+            <input type="checkbox" id="sp-check" value="sp">
+        </label>
+        <button>OK</button>
+    </form>
+    <div class="result-container"></div>
+</body>
+
+</html>
