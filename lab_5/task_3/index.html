@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="./script.js" defer></script>
+  <style>
+    .task{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app">
-    <div class="score"></div>
+  <form>
+    <div class="title"></div>
+    <button class="next">наступне завдання</button><br/>
     <div class="task"></div>
-    <div class="answers">
-      <ul></ul>
-    </div>
-    <div class="actions">
-      <button id="new-task" disabled>наступне завдання</button>
-    </div>
-  </div>
+    <div class="result"></div>
+  </form>
 </body>
-
 </html>
