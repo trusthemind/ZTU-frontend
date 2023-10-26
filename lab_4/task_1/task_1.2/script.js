@@ -112,8 +112,6 @@ const createForm = () => {
     buttoncontainer.appendChild(resetButton)
     buttoncontainer.appendChild(submitButton)
 
-
-
     interestscontainer.appendChild(soccerinterest)
     interestscontainer.appendChild(chessinterest)
     interestscontainer.appendChild(drawinginterest)
