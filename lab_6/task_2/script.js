@@ -5,6 +5,7 @@ const input = document.querySelector("#textarea-input");
 let inputValue = "";
 console.log(inputValue);
 input.addEventListener("change", (e) => {
+    container.innerHTML = "";
     inputValue = e.target.value;
     inputValue = inputValue.trim();
 
@@ -18,6 +19,6 @@ input.addEventListener("change", (e) => {
 
         container.appendChild(square);
     }
-    if (!inputValue) { container.removeChild(square); }
+
 })
 document.body.appendChild(container);

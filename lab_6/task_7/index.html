@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+        .posts,.form{
+            width: 35rem;
+        }
+        .posts{
+            border: 1px solid black;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+        }
+        .form
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="posts">
+      <div class="post">
+        <div class="header">
+          <div class="login">user dev</div>
+          <div class="date"></div>
+        </div>
+        <div class="content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo,
+          alias! Natus fugiat exercitationem eos praesentium deserunt doloremque
+          eveniet totam nihil veniam eligendi. Maxime velit perspiciatis aliquam
+          nemo veritatis consectetur qui!
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <h1 style="text-align: center">Add comment</h1>
+      <label>Name: <input type="text" /></label>
+      <label>Comment: <textarea></textarea></label>
+      <button onclick="sendHandler()">Send</button>
+    </div>
+  </body>
+</html>

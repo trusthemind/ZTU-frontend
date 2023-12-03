@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #palette {
+        border: 1pxpx solid black;
+        border-collapse: separate;
+      }
+
+      #palette td {
+        border: 1px dotted white;
+        height: 150px;
+        width: 150px;
+      }
+
+      #canvas {
+        max-width: 400px;
+        border: 2px solid black;
+      }
+
+      #canvas td {
+        border: 1px solid black;
+        height: 50px;
+        width: 50px;
+      }
+
+      .active {
+        border: 5px solid #0a0947 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="palette">
+      <tr>
+        <td>#c00000</td>
+        <td>#ff0000</td>
+        <td>#ffbd00</td>
+      </tr>
+      <tr>
+        <td>#ffff00</td>
+        <td>#92d356</td>
+        <td>#10b05a</td>
+      </tr>
+      <tr>
+        <td>#0693db</td>
+        <td>#0070c0</td>
+        <td>#002060</td>
+      </tr>
+    </table>
+    <table id="canvas"></table>
+  </body>
+</html>

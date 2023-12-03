@@ -18,6 +18,7 @@ button.addEventListener("click", (e) => {
 });
 
 const postTableItem = (array, item) => {
+    if (array.length) {
     if (item?.name != "" && item?.surname != "") {
         array.push(item);
         const tableRow = document.createElement("tr");
@@ -32,5 +33,6 @@ const postTableItem = (array, item) => {
         tableRow.appendChild(surnameCell);
         table.appendChild(tableRow);
     }
+}
 }
 postTableItem(tableArray);
