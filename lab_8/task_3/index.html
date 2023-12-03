@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+      main {
+        max-width: 1100px;
+        height: 670px;
+        margin: auto;
+        font-family: arial;
+        position: relative;
+      }
+
+      #slider {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        left: 100%;
+        transition: left 1s;
+      }
+
+      .button {
+        position: absolute;
+        padding: 10px;
+        z-index: 10;
+        background: black;
+        color: white;
+      }
+
+      #next.button {
+        right: 0;
+      }
+
+      #slide1 {
+        background-image: url("http://pre01.deviantart.net/37c2/th/pre/i/2015/179/0/1/nightengale_sky_by_pr164-d8z4lht.jpg");
+        left: 0;
+      }
+
+      #slide2 {
+        background-image: url("http://pre13.deviantart.net/3bc5/th/pre/i/2015/143/1/f/sector_asainia_by_pr164-d8uiv39.jpg");
+      }
+
+      #slide3 {
+        background-image: url("http://pre01.deviantart.net/7745/th/pre/f/2015/165/6/d/nebula_amarnthe_by_pr164-d8xak7o.jpg");
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div id="slider">
+        <a href="#" class="button" id="next"> Next </a>
+        <a href="#" class="button" id="previous"> Previous </a>
+        <div class="slide" id="slide1">Slide One</div>
+        <div class="slide" id="slide2">Slide Two</div>
+        <div class="slide" id="slide3">Slide Three</div>
+      </div>
+    </main>
+  </body>
+</html>
