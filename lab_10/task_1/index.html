@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+      .user-form {
+        padding: 16px;
+        background-color: #e1e1e1;
+        border: 1px solid black;
+        border-radius: 16px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        gap: 10px;
+      }
+
+      textarea {
+        max-width: 225px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" class="user-form">
+      <label for="name">Name<input type="text" id="name"/></label>
+      <textarea
+        name="desc"
+        id="desc"
+        cols="27"
+        rows="10"
+        placeholder="Description"
+      ></textarea>
+      <div>
+        <label for="men">Men<input type="checkbox" name="men" id="isMen"/></label>
+        <label for="women">student<input type="radio" name="student" id="isStudent"/></label>
+        <select name="region" id="region">
+          <option value="am">AM</option>
+          <option value="ka">KA</option>
+          <option value="va">VA</option>
+        </select>
+      </div>
+      <button type="submit" id="btn">ADD</button>
+    </form>
+  </body>
+</html>
