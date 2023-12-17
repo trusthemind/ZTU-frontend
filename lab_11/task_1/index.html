@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+      #timer {
+        position: absolute;
+        left: 90%;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        img {
+          transition: 2s ease-in-out all;
+          border: 1px solid black;
+          border-radius: 2rem;
+        }
+
+        button {
+          color: black;
+          background-color: white;
+          padding: 1rem;
+          border: rgba(33, 36, 37, 0.192) solid;
+          border-radius: 1.5rem;
+          border-radius: 1px solid black;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="timer"></p>
+    <div class="container">
+      <img src="" alt="" id="img" width="400" height="400" />
+      <button id="load-btn">Load Images</button>
+      <button id="geo">Geo Status</button>
+    </div>
+  </body>
+</html>
